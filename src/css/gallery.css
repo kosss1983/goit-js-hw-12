@@ -1,0 +1,130 @@
+.form-image {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.form-image input {
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: #808080;
+  padding: 0 8px;
+  font-weight: 400;
+  color: #2e2f42;
+}
+
+.form-image button {
+  width: 91px;
+}
+
+.image-button {
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4e75ff;
+}
+
+.form-image button:hover,
+.load-more button:hover {
+  background-color: #6c8cff;
+}
+
+.form-image-font {
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gallery-link {
+  flex-basis: calc(100% * (1 / 5) - 48px);
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  display: block;
+  text-decoration: none;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  user-select: none;
+}
+
+.gallery-link:hover {
+  transform: scale(1.02);
+}
+
+.image-descrition {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 48px;
+}
+
+.image-descrition div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-descrition-font {
+  font-family: Montserrat;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.image-descrition div span:nth-child(1) {
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.image-descrition div span:nth-child(2) {
+  line-height: 24px;
+}
+
+.load-more button {
+  width: 125px;
+  height: 40px;
+  margin: 0 auto;
+  display: none;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.loader span {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #4e75ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
