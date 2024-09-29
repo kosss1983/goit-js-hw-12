@@ -67,7 +67,7 @@ function createGallery(hits) {
     })
     .join('');
 
-  galleryEl.insertAdjacentHTML('beforeend', galleryItems);
+  galleryEl.innerHTML += galleryItems;
   new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,

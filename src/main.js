@@ -49,7 +49,7 @@ const onSubmitForm = async event => {
   showLoader();
 
   try {
-    const {hits, totalHits} = await fetchImages(fetchParams);
+    const { hits, totalHits } = await fetchImages(fetchParams);
     pages = Math.ceil(totalHits / perPage);
     createGallery(hits);
 
@@ -60,7 +60,7 @@ const onSubmitForm = async event => {
     showError(error.message);
   } finally {
     hideLoader();
-  };
+  }
 };
 
 const loadMore = async () => {
@@ -70,7 +70,7 @@ const loadMore = async () => {
   showLoader();
 
   try {
-    const {hits} = await fetchImages(fetchParams);
+    const { hits } = await fetchImages(fetchParams);
     createGallery(hits);
     handleScrollView();
 
@@ -83,7 +83,7 @@ const loadMore = async () => {
     showError(error.message);
   } finally {
     hideLoader();
-  };
+  }
 };
 
 imageForm.addEventListener('submit', onSubmitForm);
