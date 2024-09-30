@@ -39,10 +39,16 @@ const handleScrollView = () => {
 
 const onSubmitForm = async event => {
   const { imageName } = event.currentTarget.elements;
-  fetchParams.q = imageName.value;
+  fetchParams.q = imageName.value.trim();
+  fetchParams.page = 1;
 
   event.preventDefault();
   event.currentTarget.reset();
+
+  if (fetchParams.q === '') {
+    showError('Image name cannot to be empty!');
+    return;
+  }
 
   removeGallery();
   hideLoadMore();
